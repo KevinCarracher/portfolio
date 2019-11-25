@@ -11,36 +11,50 @@
 
 #top .info {
     padding: 15px;
+    position: relative;
 }
+
 #top .info .blue-square {
+    position: absolute;
     border: 20px solid #dbf1ff;
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
+    top: -48%;
+    left: -36%;
+    z-index: 0;
 }
 
 #top .info h1{
+    position: relative;
     font-size: 2rem;
     text-transform: uppercase;
     font-weight: 700;
     color: #16171b;
     margin-bottom: 2rem;
+    z-index: 1;
 }
 
 #top .info p{
+    position: relative;
     font-size: 2rem;
     text-transform: capitalize;
     font-weight: 700;
     color: #919191;
     margin-bottom: 4rem;
+    z-index: 1;
 }
 
 #top .info a{
+    position: relative;
+    font-size: .9rem;
     color: #16171b;
     text-transform: uppercase;
-    font-weight: 600;
+    letter-spacing: 2px;
+    font-weight: 700;
     text-decoration: none;
     border-bottom: 2px solid #000;
     padding-bottom: 5px;
+    z-index: 1;
 }
 
 #top .img {
@@ -55,4 +69,5 @@
     width: 100%;
     max-width: 700px;
     height: 700px;
+    margin: 0 auto;
 }
