@@ -33,17 +33,20 @@
 #portfolio .portfolio-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    grid-template-rows: 200px 200px 200px;
+    gap: 10px;
 }
 
 #portfolio .portfolio-container .box {
-    background: red;
+    background: black;
     display: block;
     transition: all .4s ease-in-out;
-    padding: 40px;
     cursor: pointer;
-    height: 200px;
     width: 100%;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
 }
 
 #portfolio .portfolio-container .box:hover {
@@ -53,34 +56,46 @@
     box-shadow: 0px 40px 74px 24px rgba(0,0,0,0.08);
 }
 
-#portfolio .portfolio-container .box .fas{
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    
-} 
-
-#portfolio .portfolio-container .box h5{
-    font-size: 0.9rem;
-    font-weight: 700px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 2rem;
-} 
-
-#portfolio .portfolio-container .box p {
-    font-size: 0.8rem;
-    line-height: 1.5;
-    color: #b3b3b3;
+#portfolio .portfolio-container .box.image1{
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
 }
 
-#portfolio .portfolio-container .box.blue {
-    border-bottom: 2px solid #52b8ff;
+#portfolio .portfolio-container .box.image1 .image{
+    background: url(../img/grand.jpg);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
-#portfolio .portfolio-container .box.red {
-    border-bottom: 2px solid #ff5253;
+#portfolio .portfolio-container .box.image1 .image .hover-bg{
+    background: rgba(255, 255, 255, 0);
+    padding: 10px 20px;
+    transition: all .4s ease-in-out;
 }
 
-#portfolio .portfolio-container .box.yellow {
-    border-bottom: 2px solid #ffc853;
+#portfolio .portfolio-container .box:hover .image .hover-bg{
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10px 20px;
+}
+
+
+#portfolio .portfolio-container .box.image1 .hover-bg .title .text{
+    background: black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transform: translate3d(0, 400px, 0);
+    transition: transform .2s ease-in-out .2s;
+    opacity: 0;
+}
+
+#portfolio .portfolio-container .box:hover .image .hover-bg .title .text{
+    background: black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transform: translate3d(0, 0, 0);
+    transition: all .2s ease-in-out .2s;
+    opacity: 1;
 }
